@@ -12,22 +12,12 @@ on:
 jobs:
  build:
   runs-on: ubuntu-latest
-  env:
-    RUNNER_TOOL_CACHE: /toolcache
   steps:
-  - uses: actions/checkout@v4
-  - uses: actions/setup-node@v4
-    with:
-      node-version: 20
-  - uses: pnpm/action-setup@v3
-    with:
-      version: 9
-      run_install: false
-      standalone: true
-      dest: ~/setup-pnpm
-  
-  - name: Build
-    run: |
-      # Add your build commands here
-      pnpm install && pnpm build
-      zip -r dist.zip dist
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm ci
+    - run: npm run build --if-present
+    - run: npm test
