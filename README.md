@@ -2,6 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+This is Backend Repository for Front end UI. Check this Front End
+Repository --> https://github.com/hendisantika/https://github.com/hendisantika/employee-api.git
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -81,3 +84,17 @@ here: [https://facebook.github.io/create-react-app/docs/deployment](https://face
 
 This section has moved
 here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Images Screenshot
+
+List Employees
+
+![List Employees](img/list.png "List Employees")
+
+Add New Employee
+
+![Add New Employee](img/add.png "Add New Employee")
+
+Update Employee
+
+![Update Employee](img/update.png "Update Employee")
